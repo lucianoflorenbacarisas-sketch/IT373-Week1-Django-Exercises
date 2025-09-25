@@ -1,0 +1,5 @@
+✔ Python version: 3.11.5
+✔ Virtual environment active: Yes (.venv)
+✔ Django version installed: 4.2.x
+✔ Development server running: Yes (http://127.0.0.1:8000/)
+✔ Git remote set: Yes (GitHub repo linked and pushed)
