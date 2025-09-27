@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Announcements{% endblock %}
+{% block content %}
+<h2>Announcements</h2>
+<ul class="list-group">
+    {% for ann in announcements %}
+    <li class="list-group-item">
+        <h5>{{ ann.title }}</h5>
+        <p>{{ ann.content|truncatechars:100 }}</p>
+        <a href="{% url 'announcement_detail' ann.id %}" class="btn btn-sm btn-secondary">View Details</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

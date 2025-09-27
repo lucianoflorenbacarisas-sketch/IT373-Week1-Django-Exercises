@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ announcement.title }}{% endblock %}
+{% block content %}
+<h2>{{ announcement.title }}</h2>
+<p>
+	{{ announcement.content|slice:":100" }}<span id="more-text" style="display:none;">{{ announcement.content|slice:"100:" }}</span>
+	{% if announcement.content|length > 100 %}
+		<button id="toggle-btn" class="btn btn-link p-0">Read more</button>
+	{% endif %}
+</p>
+<a href="{% url 'announcement_list' %}">Back to list</a>
+{% endblock %}
